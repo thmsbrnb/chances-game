@@ -314,7 +314,7 @@ body{
 /* RESPONSIVE */
 @media screen and (max-width: 500px){
     body{
-        overflow-y: hidden;
+        /* overflow-y: hidden; */
     }
     .screen__home{
         width: 100%;
