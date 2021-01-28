@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@400;900&family=Poppins:wght@100;300;400;700;900&display=swap"
+        rel="stylesheet">
+    <title>Chances: a very simple game</title>
+</head>
+
+<body>
+
+
+    <section class="screen__home">
+        <section class="screen__home-up">
+            <h1 class="screen__home--title">chances</h1>
+            <h2 class="screen__home--subtitle">a very simple game</h2>
+            <a href="#screen-initialize" class="screen__home--enter button">enter</a>
+        </section>
+        <section class="screen__home-down">
+            <p>2021 Thomas Barnabé</p>
+        </section>
+    </section>
+
+    <section class="screen__initialize" id="screen-initialize">
+        <form class="screen__initialize--form" action="">
+            <h2>choose players</h2>
+            <label for="">player #1</label>
+            <input type="text" maxlength="12">
+            <label for="">player #2</label>
+            <input type="text" maxlength="12">
+            <div class="button-box">
+                <button class="button-type" type="submit">let's go!</button>
+            </div>
+        </form>
+    </section>
+
+    <section class="screen__play" id='screen-play'>
+        <section class="screen__play--header">
+            <h1>chances</h1>
+            <h2>a very simple game</h2>
+        </section>
+
+        <section class="screen__play--floor">
+            <section class="box floor-up-left">
+                <img src="img/dice1.png" alt="dice">
+            </section>
+            <section class="box floor-up-right">
+                <h1 class="player-name1">player #1</h1>
+                <h4 class="player-score1">score: 0</h4>
+            </section>
+            <section class="box floor-down-left">
+                <h1 class="player-name2">player #2</h1>
+                <h4 class="player-score2">score: 0</h4>
+            </section>
+            <section class="box floor-down-right">
+                <img src="img/dice2.png" alt="dice">
+            </section>
+        </section>
+
+        <section class="screen__play--command">
+            <button class="button-type command__play-button">start</button>
+            <button class="button-type command__reset-button">reset</button>
+        </section>
+
+        <section class="screen__play--footer">
+            <a href="#screen-initialize">change players</a>
+        </section>
+    </section>
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
