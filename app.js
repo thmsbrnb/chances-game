@@ -1,6 +1,16 @@
+$('.screen__initialize').hide()
+$('.screen__play').hide()
+
+// ENTER
+$('a:first').on('click', function(e){
+    $('.screen__home').fadeOut(100)
+    $('.screen__initialize').fadeIn(100)
+})
+
 // GO TO PLAYER
 $('button:eq(0)').on('click', function (e) {
-    window.location.href = "#screen-play"
+    $('.screen__initialize').fadeOut(100)
+    $('.screen__play').fadeIn(100)
 
     $('.player-name1').text($('input:eq(0)').val())
     $('.player-name2').text($('input:eq(1)').val())
@@ -13,6 +23,9 @@ $('button:eq(0)').on('click', function (e) {
 
 // CHANGE PLAYERS
 $('a:eq(1)').on('click', function (e) {
+    $('.screen__play').fadeOut(100)
+    $('.screen__initialize').fadeIn(100)
+
     $('input:eq(0)').val('')
     $('input:eq(1)').val('')
 
@@ -59,8 +72,8 @@ $('button:eq(1)').on('click', function (e) {
     $('.player-name2').css('color','rgba(255,255,255,0.95)')
 
     if(faceOne === faceTwo){
-        $('.player-name1').css('color','rgba(34,34,34,.7')
-        $('.player-name2').css('color','rgba(34,34,34,.7')
+        // $('.player-name1').css('color','rgba(34,34,34,.7')
+        // $('.player-name2').css('color','rgba(34,34,34,.7')
         $('.player-name1').fadeOut()
         $('.player-name1').fadeIn(75)
         $('.player-name2').fadeOut()
